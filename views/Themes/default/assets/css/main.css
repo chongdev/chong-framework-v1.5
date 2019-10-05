@@ -1,0 +1,303 @@
+/* =========================================================        
+          .o88
+          "888
+ .oooo.    888  .oo.    ..o88.     ooo. .oo.    .oooo`88
+d88' `8b   88bP"Y88b   888P"Y88b  "888P"Y88b   888' `88b 
+888        88b   888   888   888   888   888   888   888
+888. .88   888   888   888   888   888   888   888. .880
+ 8`bo8P'  o888o o888o   8`bod8P'  o888o o888o   .oooo88o
+                                                     088`
+                                                    .o88
+============================================================ */
+
+
+/*----------------------------------------------------------------------------*/
+/*                              RESET & DEFAULTS                              */
+/*----------------------------------------------------------------------------*/
+
+
+/**/
+/* root */
+/**/
+:root {
+  --main-background: #ffffff;
+  --main-color: #000;
+
+  --main-link-color: #06802b;
+  
+  --main-title-background: #82c55b;
+  --main-title-color: #fff;
+
+}
+
+/**/
+/* reset */
+/**/
+body, input, textarea, select, button, .editor-text {
+    font-size: 16px;
+}
+a:hover{color: var(--main-link-color)}
+figure {margin:0}
+h1,h2,h3{font-weight: 500}
+h1{font-size: 160%}
+h2{font-size: 140%}
+h3{font-size: 120%}
+p{font-weight:normal}
+table{width:100%}
+/**/
+/* forms */
+/**/
+input[type="checkbox"]:disabled+label{color:#c6c6c6}
+input[type=checkbox], input[type=radio]{position:relative;border:1px solid;display:inline-block;margin-top:2px;margin-bottom:0;padding:0;vertical-align:text-bottom}
+input[type=checkbox]:active{appearance:none;border:none \0;border:none\9}
+input[type=radio]{border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;-ms-border-radius:8px}
+input[type=radio]:hover, input[type=radio]:focus{background-color:#777}
+input[type=radio]:active{background-color:#333}
+input[type=checkbox], input[type=radio]{box-sizing:border-box;position:relative;padding:0;background-color:transparent;border:none;outline:0;box-sizing:border-box;-webkit-appearance:none;-webkit-user-select:none;height:18px;width:18px;cursor:pointer;border-radius:2px}
+input[type=checkbox]:before, input[type=radio]:before, input[type=checkbox]:after, input[type=radio]:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;box-sizing:border-box;border-radius:2px}
+input[type=radio]:after{top:4px;left:4px;right:4px;bottom:4px}
+input[type=checkbox]:before, input[type=radio]:before{border:2px solid #b2b2b2;background-color:#fff}
+input[type=checkbox]:hover:before, input[type=radio]:hover:before{box-shadow:0 1px 2px rgba(0,0,0,.1)}
+input[type=checkbox]:after{content:'\2713';text-align:center;color:#fff;opacity:0;background-color:transparent;background-position:center center;background-repeat:no-repeat;background-size:9px}
+input[type=radio], input[type=radio]:before, input[type=radio]:after{border-radius:50%}
+label.checkbox input[type="checkbox"]:checked::before, label.radio input[type=radio]:checked::before{border-color:#2196f3}
+label.checkbox input[type="checkbox"]:checked::after, label.radio input[type=radio]:checked::after{opacity:1;background-color:#2196f3;box-shadow:0 1px 2px rgba(0,0,0,.2);line-height:18px}
+label.checkbox{display:inline-block}
+label.radio{line-height:20px}
+label.radio:hover{cursor:pointer}
+label.radio input[type=radio]{float:left;margin-right:5px}
+input[type=checkbox]:disabled, input[type=radio]:disabled{opacity:.5;cursor:default}
+
+
+/*----------------------------------------------------------------------------*/
+/*                                   LAYOUT                                   */
+/*----------------------------------------------------------------------------*/
+body{
+    background-color: var(--main-background);
+    color: var(--main-color);
+    overflow-y: scroll;
+}
+
+.inputtext:focus{border-color:var(--main-link-color)}
+/**/
+/* nav */
+/**/
+.nav>li{
+    float: left;
+}
+.nav>li>a{
+    display: block;
+    padding: 14px 12px;
+}
+.nav>li>a:hover{
+    text-decoration: none;
+}
+
+.pic img{
+    width: 100%;
+    max-width: initial;
+    max-height: initial;
+}
+
+.btn-primary{
+    background-color: var(--main-title-color)
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+    background-color: var(--main-link-color);
+
+}
+/**/
+/* form */
+/**/
+textarea, .inputtext{
+    background-color: #fff;
+}
+
+/**/
+/* parallax */
+/**/
+.parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/*                                   HEADER                                   */
+/*----------------------------------------------------------------------------*/
+#header-primary{
+	position: relative;
+	/*z-index: 300;*/
+    background-color: #fff;
+}
+
+/**/
+/* topbar */
+/**/
+
+
+/**/
+/* logo */
+/**/
+
+
+/**/
+/* global-actions */
+/**/
+
+
+/*----------------------------------------------------------------------------*/
+/*                                  CONTENT                                   */
+/*----------------------------------------------------------------------------*/
+
+/**/
+/* bread crumps */
+/**/
+.bread-crumps {
+    font-size: 0;
+    color: #808080;
+}
+.bread-crumps li {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 13px;
+    
+}
+.bread-crumps li:before {
+    content: '//';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    text-align: center;
+    
+}
+.bread-crumps li:first-child {
+    padding-left: 0;
+}
+.bread-crumps li:first-child:before {
+    content: '';
+}
+.bread-crumps a:hover{
+    text-decoration: none;
+}
+.bread-crumps a:hover span{
+    text-decoration: underline;
+}
+
+
+
+/**/
+/* page title*/
+/**/
+.page-title{
+    padding: 8px 12px;
+    background-color: var(--main-title-color);
+    color: var(--main-title-font-color);
+    border-left: 4px solid rgba(0,0,0,.5);
+    margin-bottom: 24px;
+}
+.page-title h1, .page-title h2, .page-title h3{
+    display: inline-block;
+}
+
+
+.page-more{
+    display: block;
+    padding: 8px 12px; 
+    text-align: center;
+    border: 1px solid rgba(0,0,0,.1);
+    color: var(--main-link-color);
+    background-color: #fff
+}
+.page-more:hover{
+    text-decoration: none;
+    background-color: var(--main-title-color);
+    color: var(--main-title-font-color);
+}
+
+/**/
+/* pagination */
+/**/
+.pagination-wrap {margin-top: 50px;}
+.pagination-wrap .pagination{}
+.pagination-wrap .pagination li{display:inline-block;}
+.pagination-wrap .pagination li + li{margin-left:10px;}
+.pagination-wrap .pagination .page{width:40px;height:40px;line-height:40px;display:block;text-align:center;background-color:rgba(0,0,0,.1)}
+.pagination-wrap .pagination .page:hover{text-decoration:none;background-color:var(--main-title-color);color:var(--main-title-font-color)}
+.pagination-wrap .pagination .page.text:hover{background-color:rgba(0,0,0,.1);cursor:default;color:#000}
+.pagination-wrap .pagination .active .page{background-color:var(--main-title-color);border-color:rgba(0,0,0,.3);color:var(--main-title-font-color)}
+.pagination-wrap .pagination .active .page:hover{cursor:default}
+
+/**/
+/* section */
+/**/
+.section + .section{
+    margin-top: 24px;
+}
+
+/**/
+/* blog */
+/**/
+
+
+
+/*----------------------------------------------------------------------------*/
+/*                                 INDEX PAGE                                 */
+/*----------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------*/
+/*                                 BANNER                                     */
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*                                 PAGE                                       */
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*                                SEARCH PAGE                                 */
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*                                ARTICLE PAGE                                */
+/*----------------------------------------------------------------------------*/
+
+
+/**/
+/* article-single */
+/**/
+
+
+/**/
+/* entry-tags */
+/**/
+
+
+/*----------------------------------------------------------------------------*/
+/*                                ABOUT PAGE                                  */
+/*----------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------*/
+/*                                ERROR PAGE                                  */
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------------------*/
+/*                                   FOOTER                                   */
+/*----------------------------------------------------------------------------*/
+
+/**/
+/* copyrights */
+/**/

@@ -13,7 +13,7 @@ class Index extends Controller {
     // home
     public function index() {
         
-        $this->view->render("home/display");
+        $this->view->render("welcome");
     }
 
     public function search($param=null) {

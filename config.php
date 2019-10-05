@@ -3,11 +3,13 @@
 date_default_timezone_set("Asia/Bangkok");
 
 // Always provide a TRAILING SLASH (/) AFTER A PATH
-define('URL', 'http://localhost/accessory/');
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
+$pathName = '/';
+define('URL', $protocol.'://'.$_SERVER['HTTP_HOST'].$pathName);
 
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'mpmf');
+define('DB_NAME', 'framework');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 

@@ -8,10 +8,19 @@ $pathName = '/';
 define('URL', $protocol.'://'.$_SERVER['HTTP_HOST'].$pathName);
 
 define('DB_TYPE', 'mysql');
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'framework');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+if( $_SERVER['SERVER_NAME']=='localhost' ){
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'framework');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+}
+else{
+    define('DB_HOST', 'web-hosting-db.mysql.database.azure.com');
+    define('DB_NAME', 'modernfarm_db');
+    define('DB_USER', 'modernfarm@web-hosting-db');
+    define('DB_PASS', '6kwTmoEhUTYAMbKS');
+}
+
 
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
